@@ -18,7 +18,7 @@ without requiring direct access to raw or intermediate data layers.
 
 
 ## Architecture
-![Analytics Serving Architecture](img/architecture.png)
+![Analytics Serving Architecture](architecture/architecture.png)
 
 This project represents the **serving layer** of the data engineering lifecycle.
 
