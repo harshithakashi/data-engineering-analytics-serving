@@ -2,14 +2,19 @@
 
 ## Problem Statement
 
-Product analytics and business teams require fast, reliable access to curated datasets to analyze user behavior, track KPIs, and support data-driven decision making.
+Business teams such as Product Analytics, Marketing, and Operations require
+fast, reliable access to analytical data to make data-driven decisions.
 
-Although the data has already been ingested and transformed in a central data lake, accessing it directly is not always efficient or user-friendly for analytics teams.
+While raw data is already ingested and transformed in a central data lake,
+analytics teams often struggle with:
+- Querying large datasets efficiently
+- Accessing consistent, business-ready metrics
+- Performing ad-hoc analysis without impacting upstream pipelines
 
-The challenge is to design an **analytics serving layer** that:
-- Exposes curated datasets in a query-friendly format
-- Enables SQL-based access for analysts and stakeholders
-- Supports interactive analysis and reporting without managing infrastructure
+The goal of this project is to design and demonstrate an **analytics serving layer**
+that exposes curated, query-optimized datasets from a data lake to analytics users.
+This enables self-service analytics, faster insights, and scalable reporting
+without requiring direct access to raw or intermediate data layers.
 
 
 ## Architecture
