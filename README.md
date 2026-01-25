@@ -2,16 +2,14 @@
 
 ## Problem Statement
 
-After data is ingested and transformed, it must be served in a way that enables
-business users and analysts to easily explore insights.
+Product analytics and business teams require fast, reliable access to curated datasets to analyze user behavior, track KPIs, and support data-driven decision making.
 
-The challenge is to:
-- Query transformed data efficiently from a data lake
-- Serve analytical results using SQL
-- Enable interactive data exploration and visualization
+Although the data has already been ingested and transformed in a central data lake, accessing it directly is not always efficient or user-friendly for analytics teams.
 
-This project demonstrates how transformed data is served for analytics using
-Amazon Athena and Python-based interactive dashboards.
+The challenge is to design an **analytics serving layer** that:
+- Exposes curated datasets in a query-friendly format
+- Enables SQL-based access for analysts and stakeholders
+- Supports interactive analysis and reporting without managing infrastructure
 
 
 ## Architecture
