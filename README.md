@@ -32,6 +32,58 @@ Transformed Data (S3)
 → Python (Pandas + AWS Wrangler)  
 → Interactive Dashboard (Charts & Widgets)
 
+## Data Model – Analytics Serving Layer
+
+The analytics serving layer follows a **star schema** optimized for analytical queries using Amazon Athena.
+
+The central **fact_orders** table captures sales transactions at the **order-line level**, while surrounding
+dimension tables provide descriptive context for products, customers, and locations.
+
+![Analytics Serving Data Model](architecture/model.png)
+
+### Fact Table
+**fact_orders**
+- orderNumber (PK)
+- orderLineNumber (PK)
+- productCode (FK)
+- customerNumber (FK)
+- postalCode (FK)
+- orderDate
+- quantityOrdered
+- priceEach
+- orderAmount
+
+**Grain:** One row per product per order
+
+### Dimension Tables
+
+**dim_products**
+- productCode (PK)
+- productName
+- productLine
+- productVendor
+- buyPrice
+- MSRP
+
+**dim_customers**
+- customerNumber (PK)
+- customerName
+- contactFirstName
+- contactLastName
+- phone
+
+**dim_locations**
+- postalCode (PK)
+- city
+- state
+- country
+
+### Analytical Benefits
+- Optimized for SQL-based analytics in Amazon Athena
+- Supports aggregations by country, product line, customer, and time
+- Clean separation between facts and dimensions
+- Enables fast, repeatable, and business-ready queries
+
 
 ## Tools and Technologies
 
